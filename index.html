@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+   <!-- adding bootstrap -->
+   <link rel="stylesheet"
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+   <!-- linking font awesome -->
+   <script src="https://kit.fontawesome.com/8bee116590.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <title>Peter B - Corona Virus tracker</title>
+
+   
+</head>
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-4"><i class="fas fa-skull-crossbones"></i> Corona virus latest stats</h1>
+        <hr class="my-4">
+        
+        <p>The coronavirus outbreak is an ongoing global outbreak of coronavirus disease (COVID-19) first identified in Wuhan, Hubei, China in December 2019.</p>
+        <p>This page provides the recent info about the COVID-19 spread around the world (updated daily from systems.jhu.edu) </p>
+        <p>As of today (<span id='todayDate'></span>) historical data is available for <span id='dataDays'></span> days since January 22, 2020. Pick a date from the field below and click submit to see the data.You can support this portal by clicking the Donate button at the bottom.</p>
+        
+             <!-- date picker here  -->
+             <div class="row">
+                <div class="col-sm-2">
+                  <input type="date" id="datePicker1" class="form-control" />
+               </div>
+              </div>
+              <div class="break-out"><br> </div>
+              <div class="row">
+                <div class="col-sm-12">
+                <button type="button" class="btn btn-primary" id='submitBtn'>See data!</button>
+              </div>
+            </div>
+             <!-- end of date picker -->
+     
+       
+       
+      </div>
+
+        <!-- This row will handle all the data -->
+    <div class="row">
+        <div class="col-sm-12">
+         
+     
+          <div class="card">
+  
+    
+            <!-- <div class="collapse" id="collapseToday"> -->
+            <div class="card-body emp" id="today-section">
+              <p><strong>Dataset is available since Jan 22, 2020 till today (<span id='todayDate1'></span>). For other dates search is disabled</strong> </p>
+
+              <div class="table-responsive">
+                <table class="table" id="today"></table>
+              </div>
+            </div>
+            <!-- </div> -->
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- end of card -->
+
+    <!-- adding a footer -->
+
+    <footer class="page-footer font-small blue fixed-bottom">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3"> 
+        
+
+        Donate via PayPal
+        <!-- paypal button here -->
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+         <input type="hidden" name="cmd" value="_donations" />
+         <input type="hidden" name="business" value="T7Y7WPTYT67W6" />
+         <input type="hidden" name="currency_code" value="USD" />
+         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+         <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+         </form>
+         Created by Peter Bold
+         
+ 
+       <!-- paypal end -->
+        
+      </div>
+      <!-- Copyright -->
+    
+    </footer>
+      
+      
+<!-- adding an arrow to scroll to the top -->
+      <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+      <!-- end   adding an arrow to scroll to the top-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.js"></script>
+   <script src='./script.js'></script>
+  <!-- Have fun and stay healthy! Peter :)  -->
+</body>
+</html>
+
+
